@@ -1,0 +1,356 @@
+* {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:#777;
+    }
+html, body{
+    margin:0;
+    padding:0;
+}
+
+
+.main h2{
+    color:rgba(20,20,20,.3);
+    height:200px;
+    width:100%;
+    background-size: cover;
+    /*tells background image to expand as much as it 
+    can until one of the borders is at either the width
+    or the height so it'll expand either as wide as it 
+    can or as tall as it can until it can't get any larger*/
+    background-image: url(/images/orgView.jpg);
+    background-repeat: no-repeat;
+    padding:50px; 
+    text-align: center;
+    margin:0px;
+}
+/* top-nav CSS 
+----------------------------------*/
+/*styles the ul element*/
+.top-nav ul {
+    display:inline;
+    float: right;
+    list-style:none;
+    padding:5px 10px 1px 10px;
+    margin:0;
+}
+/*styles all child li items*/
+.top-nav li:hover{
+    background-color: rgb(193, 217, 241);
+}
+
+/*styles the dropdown ul element*/
+.top-nav ul li ul{
+    display:none;
+    position: absolute;
+    right:5px;
+    top:25px;
+    background-color: rgb(242, 248, 248);
+    padding:0;
+    border-radius:0px 0px 4px 4px;
+    
+}
+
+/*styles the <a> elements in dropdown*/
+.top-nav ul>li>ul>li>a{
+    display:block;
+    font-size:.6em;
+    text-decoration: none;
+    color:black;
+}
+
+.top-nav ul li:hover ul{
+    display: block;
+}
+
+/*styles the dropdown li itmes*/
+.top-nav ul li ul li {
+    width: 50px;
+    border-radius:4px;
+    text-align:center;
+    text-decoration: none;
+    padding:1px;
+}
+
+/*  ---------------------------  */
+/* main-NAV CSS ---------------------  */
+/*sets width and height of main nav*/
+.main-nav{
+    width:100%;
+    height:20px;
+    background-color:lightseagreen;
+}
+/*styes the logo part of nav bar*/
+.main-nav p{
+    font-family: arial;
+    color: #222;
+    font-size: 14px;
+    line-height: 20px;
+    float: left;
+    padding: 0px 20px;
+    margin:0;
+}
+/*aligns ul elements of nav to left*/
+.main-nav ul{
+    float: left;
+    margin:0;
+    padding-left:2%;
+}
+
+.main-nav ul li{
+    float: left;
+    list-style: none;
+    position: relative;
+}
+/*
+.main-nav ul li:last-child{    
+    float: right !important;
+    position:relative;
+    bottom:3px;
+}
+*/
+/* to line up account image with txt
+ -same as .main-nav ul li:last-child
+ but set class of last li to'acct*/
+.acct a img{
+    position:relative;
+    bottom:3px;
+   /* float: right !important;*/
+}
+
+.main-nav ul li a{
+    display:block;
+    font-family: arial;
+    color: #222;
+    font-size: 10px;
+    padding:4px 10px;
+    text-decoration: none;
+}
+
+.main-nav ul li a:hover{
+    font-weight: bolder;
+}
+
+.main-nav ul li ul{
+    display:none;
+    position:absolute;
+    background-color: lightseagreen;
+    padding:3px;
+    border-radius:0px 0px 4px 4px;
+}
+
+.main-nav ul li ul li a{
+    padding: 5px 14px;
+    font-size:.6em;
+}
+
+.main-nav ul li ul li {
+    width: 95px;
+    border-radius:4px;
+}
+.main-nav ul li ul li a:hover{
+    background-color:lightgray;
+}
+
+.main-nav ul li:hover ul{
+    display: block;
+}
+/*
+.acct a{
+    float: inline-end;
+}
+*/
+.acct ul{
+    display:none;
+}
+/* ------------------------------------ */
+
+.content{
+    padding-left:10px;
+}
+.content img{
+    float:left;
+    padding:10px;
+    height:80px;
+}
+.content p {
+    color:rgb(66, 61, 61);
+    font-size:.8em;
+}
+
+.footer{
+    background-color: rgb(204, 228, 236);
+    text-align:center;
+    padding-top:10px;
+   
+}
+
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom:10px;
+}
+
+.wrapper .item{
+    box-sizing:border-box;
+    width: 20%;
+    font-size:.6em;
+}
+.wrapper .item p{
+    color:blue;
+    text-align: center;
+    font-size: .7em;
+}
+
+.wrapper .item img{
+    align-items: center;
+    
+}
+.wrapper .item .btn{
+    font-size:.6em;
+    background-color: blue;
+    color: ivory;
+    border-radius: 25px;
+}
+
+.form-box{
+    background-color: lightsteelblue;
+    width: 300px;
+    padding:0 5% 3% 5%;
+    margin:0 5%;
+    border-radius:5px;
+}
+
+.form-box h3{
+    text-align:center;
+    padding-top:10px;
+}
+
+.form label{
+    display:inline-block;
+    font-size:.6em;
+    position: relative;
+    width:60%;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 0;
+    height:20px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    padding:0;
+    height:20px;
+    margin-top: 0px;
+  }
+
+    /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.form input[type=text], select, textarea {
+    width: 100%;
+    padding: 0px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    resize: vertical;
+    font-size:.5em;
+  }
+  .form textarea {
+    width: 100%;
+    padding: 0px;
+    margin-top:5px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    resize: vertical;
+    font-size:.5em;
+  }
+  .form input[type=number]{
+    width: 100%;
+    padding: 0px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    resize: vertical;
+    font-size:.5em;
+  } 
+  .form input[type=password]{
+    width: 100%;
+    padding: 0px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    resize: vertical;
+    font-size:.5em;
+  } 
+
+  .form input[type=submit] {
+    position:relative;
+    top:10px;
+    width: 30%;
+    padding: 3px;
+    float:right;
+    border: 2px solid lightgrey;
+    border-radius: 2px;
+    resize: vertical;
+    font-size:.5em;
+    font-weight: bolder;
+    color:black;
+}
+  
+
+  /* modal css*/
+  #modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  .modal__close {
+    position: relative;
+    top: 38px;
+    right: -300px;
+    color:black;
+    text-decoration:none;
+    border: lightcyan;
+    border-radius:5px;
+  }
+  #modal:not(:target) {
+    visibility: hidden;
+    opacity: 0;
+}
+/*----------------------------*/
+.epilogue{
+    width:100%;
+    height:50px;
+    margin:10px;
+    background: linear-gradient(45deg, orange 40%, cyan);
+    /*
+    background-color:lightseagreen;
+    
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 3;
+    animation-timing-function: ease-in;
+    background-color:lightseagreen;*/
+}
+
+@keyframes example {
+    0%   {background-color:lightseagreen;}
+  25%  {background-color:linear-gradient(45 deg,lightcyan, orange, yellow,lightseagreen);}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
+  }

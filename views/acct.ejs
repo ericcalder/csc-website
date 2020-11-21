@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>csc | customer acct</title>
+        <link rel='stylesheet' href='css/acct.css'/>
+    </head>
+    <body>
+        <div class='top'>
+            <a href='index.html'><img src='images/capital.jpg' height=50px></a>
+        </div>
+        <nav class='main-nav' >
+                <p>csc website</p>
+                <ul>                   
+                
+                <li class='acct'><a href='#'>
+                    <img src='images/myAccount.jpg' width=16px></a>
+                    <ul>
+                        <li><a href='index.html'>log out</a></li>
+                        <li><a href='#'>link2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        
+<section class='main'>
+<h2>Customer Account</h2>
+    <% var flat=rows[0].prop.slice(rows[0].stair.length)%>
+    <div class="grid-container">
+        <div class="grid-item">
+            <div>
+                <p>Name:<span><%=rows[0].name%></span></p>
+            </div>
+            <div>
+                <p>email:<span><%=rows[0].email%></span></p>
+            </div>
+            <div>
+                <p>CustID:<span><%=rows[0].id%></span></p>
+            </div> 
+        </div>
+        <div class="grid-item2"></div>
+          <div class="grid-item">
+            <div>
+                <p><%=rows[0].stair%></p>
+            </div>
+            <div>
+                <p>flat:<span><%=flat%></span></p>
+            </div>
+            <div>
+                <p>postcode:<span><%=rows[0].postcode%></span></p>
+            </div>
+          </div>  
+        
+      </div>
+</section>
+<table class='table'>
+    <thead>
+        <th>Date</th>
+        <th>Transaction</th>
+        <th>Credit</th>
+        <th>Debit</th>
+        <th>Balance</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><%=rows[0].b_date%></td>
+            <td>Opening Balance</td>
+            <td></td>
+            <td></td>
+            <td><%=rows[0].bal%></td>
+        </tr>
+        <% var balance=rows[0].bal;%>
+        <% rows.forEach (function(row){%>
+        <tr>
+            <td><%=row.t_date%></td>
+            <td><%=row.trans%></td>
+        <% if(row.invoice_no){%>
+            <td></td>               <!-- credit -->
+            <td><%=row.amt%></td>   <!-- debit -->
+            <td><%=balance+row.amt%></td>   <!-- bal -->
+            <% balance=balance+row.amt;%>
+        <% } else{%>
+            <td><%=row.amt%></td>   <!-- credit -->
+            <td></td>               <!-- debit -->
+            <td><%=balance-row.amt%></td>   <!-- bal -->
+            <% balance=balance-row.amt;%>
+        <% };%>                     
+            
+        </tr>
+        <% }); %>
+    </tbody>
+</table>
+<div class='bal-due'>
+    <p>Balance Due: <span>£<%=balance%></span></p>
+</div>
+</body>

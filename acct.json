@@ -1,0 +1,28 @@
+{
+ "acct":[
+ 	{
+ 		"custID":1,
+ 		"name":"joe smith",
+ 		"email":"joe@me.com",
+ 		"stair":"2 Appin Terrace",
+ 		"flat":"1/1",
+ 		"postcode":"EH14 1ST"
+ 	},
+ 	{
+ 		"custID":2,
+ 		"name":"bill jones",
+ 		"email":"bill@me.com",
+ 		"stair":"2 Appin Terrace",
+ 		"flat":"1/2",
+ 		"postcode":"EH14 2ST"
+ 	},
+	{
+ 		"custID":3,
+ 		"name":"jim macdougal",
+ 		"email":"jim@me.com",
+ 		"stair":"3 Appin Terrace",
+ 		"flat":"1/4",
+ 		"postcode":"EH14 1ST"
+ 	}
+ ]	
+}
